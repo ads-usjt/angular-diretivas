@@ -4,10 +4,12 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SombraNaTabelaDirective } from './sombra-na-tabela.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SombraNaTabelaDirective
   ],
   imports: [
     BrowserModule,
