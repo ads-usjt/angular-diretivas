@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-diretivas';
   lembretes: Array<string> = [];
   lembrete: string;
+  defaultSombra = '10px 10px';
 
   salvar(){
     this.lembretes = [this.lembrete, ...this.lembretes];
