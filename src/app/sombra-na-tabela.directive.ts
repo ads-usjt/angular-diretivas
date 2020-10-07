@@ -1,11 +1,13 @@
-import { Directive, ElementRef, HostBinding, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[appSombraNaTabela]'
+  selector: '[sombra]'
 })
 export class SombraNaTabelaDirective {
   @HostBinding('style.boxShadow')
   sombra: string;
+  @Input('sombra')
+  entrada: string;
 
   // constructor(private elementRef: ElementRef, private renderer : Renderer2) {}
 
@@ -16,7 +18,7 @@ export class SombraNaTabelaDirective {
     //   'box-shadow',
     //   '10px 10px'
     // )
-    this.sombra = '10px 10px';
+    this.sombra = this.entrada;
   }
 
   @HostListener('mouseleave')
